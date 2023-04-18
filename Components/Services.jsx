@@ -1,5 +1,6 @@
 import React from "react";
-import images from "next/image"
+import images from "../Images/index"
+import Image from "next/image"
 
 export default ({
   setOpenProfile,
