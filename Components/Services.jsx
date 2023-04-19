@@ -5,7 +5,7 @@ import Image from "next/image"
 export default ({
   setOpenProfile,
   setCompleteModal,
-  setGetModal,
+  setGetModel,
   setStartModal,
 }) => {
   const team = [
@@ -33,7 +33,7 @@ export default ({
     if (text === 1) {
       setCompleteModal(true)
     } else if (text === 2) {
-      setGetModal(true)
+      setGetModel(true)
     } else if (text ===3) {
       setStartModal(true)
     }else if (text === 4) {
