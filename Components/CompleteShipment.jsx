@@ -4,7 +4,7 @@ export default ({ completeModal, setCompleteModal, completeShipment }) => {
   const [completeShip, setCompleteShip] = useState({
     receiver: "",
     index: ""
-  })}
+  })
 
   const changeStatus = async () => {
     completeShipment(completeShip)
@@ -83,3 +83,4 @@ export default ({ completeModal, setCompleteModal, completeShipment }) => {
   ) : (
     ""
   )
+}
