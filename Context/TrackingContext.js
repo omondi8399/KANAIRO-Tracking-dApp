@@ -5,7 +5,7 @@ import { ethers } from "ethers"
 //INTERNAL IMPORT 
 import tracking from "../Context/TrackingContext.js"
 const ContractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa364180aa3"
-// const ContractABI = tracking.abi
+const ContractABI = tracking.abi
 
 //------FETCHING SMART CONTRACT
 const fetchContract = (signerOrProvider) => 
