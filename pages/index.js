@@ -30,7 +30,7 @@ const index = () => {
   const [openProfile,setOpenProfile] = useState(false)
   const [startModal,setStartModal] = useState(false)
   const [completeModal, setCompleteModal] = useState(false)
-  const [getModal, setGetModal] = useState(false)
+  const [getModel, setGetModel] = useState(false)
 
   //DATA STATE VARIABLE
   const [allShipmentsData, setAllShipmentsData] = useState()
@@ -49,7 +49,7 @@ const index = () => {
       <Services
       setOpenProfile={setOpenProfile}
       setCompleteModal={setCompleteModal}
-      setGetModal={setGetModal}
+      setGetModel={setGetModel}
       setStartModal={setStartModal}
       />
       <Table
@@ -73,8 +73,8 @@ const index = () => {
       completeShipment={completeShipment}
       />
       <GetShipment
-      getModal={getModal}
-      setGetModal={setGetModal}
+      getModel={getModel}
+      setGetModel={setGetModel}
       getShipment={getShipment}
       />
       <startShipment
