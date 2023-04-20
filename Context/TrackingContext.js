@@ -3,19 +3,19 @@ import Web3Modal from "web3modal"
 import { ethers } from "ethers"
 
 //INTERNAL IMPORT 
-import tracking from "../Context/TrackingContext.js"
-const ContractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa364180aa3"
-// const ContractABI = tracking.abi
+import tracking from "../Context/Tracking.json"
+const ContractAddress = "0x5fbdb2315678afecb367f032d93f642f64180aa3"
+const ContractABI = tracking.abi
 
 //------FETCHING SMART CONTRACT
 const fetchContract = (signerOrProvider) => 
-  new ethers.contract(ContractAddress, ContractABI, signerOrProvider)
+  new ethers.Contract(ContractAddress, ContractABI, signerOrProvider)
 
 export const TrackingContext = React.createContext()
 
 export const TrackingProvider = ({ children }) => {
     //STATE VARIABLE
-    const DappName = "Kanairo Tracking Dapp"
+    const DappName = "KANAIRO Tracking Dapp"
     const [currentUser, setCurrentUser] = useState("")
 
     const createShipment = async (items) => {
@@ -127,7 +127,7 @@ export const TrackingProvider = ({ children }) => {
             const contract = fetchContract(provider)
             const shipment = await contract.getShipment(accounts[0], index * 1)
 
-            const SingleShiplent = {
+            const SingleShipment = {
                 sender: shipment[0],
                 receiver: shipment[1],
                 pickupTime: shipment[2].toNumber(),
@@ -138,7 +138,7 @@ export const TrackingProvider = ({ children }) => {
                 isPaid: shipment[7],
             }
 
-            return SingleShiplent
+            return SingleShipment
         } catch (error) {
             console.log("sorry no shipment")
         }
