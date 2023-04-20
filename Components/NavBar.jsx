@@ -3,7 +3,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { TrackingContext } from "../Context/TrackingContext"
 import { Nav1, Nav2, Nav3 } from "../Components/index.js"
 
-const NavBar = () => {
+export default () => {
   const [state, setState] = useState(false)
   const { currentUser, connectWallet } = useContext(TrackingContext)
 
@@ -17,12 +17,12 @@ const NavBar = () => {
   useEffect(() => {
     document.onClick = (e) => {
       const target = e.target
-      if (!target.closest(".menu_btn")) setState(false)
+      if (!target.closest("menu_btn")) setState(false)
     }
   }, [])
   return (
    <nav
-    className={`bg-white pb-5 md:text-sm ${state 
+    className={`bg-white pb-5 md:text-sm ${ state
       ? "shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-2 md:mt-0"
       : ""
       }`}
@@ -39,7 +39,7 @@ const NavBar = () => {
         </a>
         <div className="md:hidden">
           <button className="menu-btn tex-gray-500 hover:text-gray-800"
-          onClick={() => setState(!false)}>
+          onClick={() => setState(!state)}>
             {state ? <Nav1 /> : <Nav2 />}
           </button>
         </div>
@@ -84,4 +84,3 @@ const NavBar = () => {
   )
 };
 
-export default NavBar;
