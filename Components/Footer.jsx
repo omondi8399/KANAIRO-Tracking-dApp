@@ -28,7 +28,7 @@ export default () => {
             <div className="space-y-6">
               <img src="https://www.floatui.com/logo.svg" alt="theLogo" className="w-32" />
               <p className="max-w-md">
-                This is Kanairo Supply Chain Dapp Footer section
+                KANAIRO Dapp is one of the leading Web3 Supply chain .
               </p>
               <ul className="flex flex-wrap items-center gap-4 text-sm sm:text-base">
                 {footerNavs.map((item, idx) => (
